@@ -5,9 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Typing Test</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+
+    <div class="barre-de-navigation">
+        <div class="barre-de-navigation__gauche">
+            <div class="logo">Typing Test</div>
+        </div>
+        <div class="barre-de-navigation__droite">
+            <i class="fas fa-user barre-de-navigation__icone" id="inscription-btn"></i>
+            <i class="fas fa-moon barre-de-navigation__icone" id="toggle-mode"></i>
+        </div>
+    </div>
+    <div class="conteneur-principal">
+        <div class="barre-laterale">
+            <ul class="barre-laterale__liste">
+                <li class="barre-laterale__item" data-section="accueil"><i class="fas fa-home"></i><span class="barre-laterale__lien">Accueil</span></li>
+                <li class="barre-laterale__item" data-section="jeu-de-typing"><i class="fas fa-keyboard"></i><span class="barre-laterale__lien">Test de frappe</span></li>
+                <li class="barre-laterale__item" data-section="jeu-de-typing"><i class="fas fa-trophy"></i><span class="barre-laterale__lien">Compétition</span></li>
+                <li class="barre-laterale__item" data-section="classement"><i class="fas fa-chart-bar"></i><span class="barre-laterale__lien">Classement</span></li>
+                <li class="barre-laterale__item" data-section="a-propos"><i class="fas fa-info-circle"></i><span class="barre-laterale__lien">À propos</span></li>
+            </ul>
+            <div class="barre-laterale__deconnexion">
+                <i class="fas fa-sign-out-alt"></i><span class="barre-laterale__lien">Se déconnecter</span>
+            </div>
+
     <header>
         <h1>Typing Test</h1>
         <label for="mode">Select Mode:</label>
