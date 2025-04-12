@@ -15,4 +15,19 @@ body{
     flex-direction: column;
 }
 
+.barre-de-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: rgb(28, 37, 38);
+    border-bottom: 1px solid #2a3435;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+
 
