@@ -117,3 +117,16 @@ function afficherSection(sectionId) {
     }
 };
 
+
+document.querySelectorAll('.barre-laterale__item').forEach(item => {
+    item.addEventListener('click', () => {
+        const section = item.getAttribute('data-section')
+        if (section) {
+            afficherSection(section);
+            if (section === 'jeu-de-typing') {
+                startTest()
+            }
+        }
+    })
+});
+
