@@ -226,3 +226,82 @@ body {
     transform: scale(1.05);
     box-shadow: 0 0 20px rgba(240, 173, 78, 0.8);
 }
+
+.classement table {
+    width: 100%;
+    max-width: 1350px;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.classement__entete {
+    background-color: #3a3a3a;
+    font-weight: bold;
+    color: #b4b2b2;
+}
+
+.classement__entete th {
+    padding: 15px 20px;
+    text-align: center;
+}
+
+.classement tbody td {
+    padding: 15px 20px;
+    text-align: center;
+    border: none;
+}
+
+.classement tbody tr:nth-child(odd) {
+    background-color: #2a2a2a;
+}
+
+.classement tbody tr:nth-child(even) {
+    background-color: #333333;
+}
+
+.classement tbody tr:hover {
+    background-color: #444444;
+}
+
+.classement__rang {
+    width: 50px;
+    text-align: center;
+}
+
+.classement__rang i {
+    color: #ffd700;
+    font-size: 18px;
+}
+
+.classement__nom {
+    display: flex;
+    align-items: center;
+    padding-left: 25px;
+}
+
+.classement__nom i {
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+    font-size: 16px;
+    color: white;
+}
+
+.classement__wpm {
+    width: 120px;
+    text-align: center;
+}
+
+.classement__precision {
+    width: 120px;
+    text-align: center;
+}
+
+.classement__date {
+    width: 150px;
+    text-align: center;
+}
