@@ -104,3 +104,16 @@ modeSelect.addEventListener("change", () => startTest());
 
 // Start the test
 startTest();
+
+
+const sections = document.querySelectorAll('.section')
+function afficherSection(sectionId) {
+    sections.forEach(section => {
+        section.classList.remove('section--active')
+    })
+    const targetSection = document.getElementById(sectionId)
+    if (targetSection) {
+        targetSection.classList.add('section--active')
+    }
+};
+
