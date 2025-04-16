@@ -141,4 +141,29 @@ document.getElementById('start-competition').addEventListener('click', () => {
     startTest()
 })
 
+const toggleModeButton = document.getElementById('toggle-mode')
+const body = document.body;
+const savedMode = localStorage.getItem('mode')
+
+if (savedMode) {
+    body.classList.add(savedMode)
+    if (savedMode === 'mode-clair') {
+        toggleModeButton.classList.remove('fa-moon')
+        toggleModeButton.classList.add('fa-sun')
+    }
+}
+
+toggleModeButton.addEventListener('click', () => {
+    if (body.classList.contains('mode-clair')) {
+        body.classList.remove('mode-clair')
+        toggleModeButton.classList.remove('fa-sun')
+        toggleModeButton.classList.add('fa-moon')
+        localStorage.setItem('mode', '')
+    } else {
+        body.classList.add('mode-clair')
+        toggleModeButton.classList.remove('fa-moon')
+        toggleModeButton.classList.add('fa-sun')
+        localStorage.setItem('mode', 'mode-clair')
+    }
+})
 
