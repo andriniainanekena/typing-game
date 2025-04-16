@@ -341,3 +341,15 @@ body.mode-clair .barre-laterale__lien {
     color: #333;
 }
 
+body.mode-clair .contenu__titre {
+    color: #333;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+body.mode-clair .contenu__separateur {
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+body.mode-clair .contenu__texte-bienvenue {
+    color: #333;
+}
