@@ -305,3 +305,8 @@ body {
     width: 150px;
     text-align: center;
 }
+
+body.mode-clair {
+    background-color: #e0e7ff;
+    color: #333;
+}
