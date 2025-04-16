@@ -353,3 +353,33 @@ body.mode-clair .contenu__separateur {
 body.mode-clair .contenu__texte-bienvenue {
     color: #333;
 }
+
+body.mode-clair .classement table {
+    color: #333;
+    background-color: white;
+}
+
+body.mode-clair .classement__entete {
+    background-color: #e0e7ff;
+    color: #333;
+}
+
+body.mode-clair .classement tbody tr:nth-child(odd) {
+    background-color: white;
+}
+
+body.mode-clair .classement tbody tr:nth-child(even) {
+    background-color: #f0f0f0;
+}
+
+body.mode-clair .classement tbody tr:hover {
+    background-color: #e0e7ff;
+}
+
+body.mode-clair .classement__rang i {
+    color: #d4a017;
+}
+
+body.mode-clair .classement__nom i {
+    color: #007bff;
+}
