@@ -130,3 +130,15 @@ document.querySelectorAll('.barre-laterale__item').forEach(item => {
     })
 });
 
+
+document.getElementById('start-test').addEventListener('click', () => {
+    afficherSection('jeu-de-typing')
+    startTest()
+})
+
+document.getElementById('start-competition').addEventListener('click', () => {
+    afficherSection('jeu-de-typing')
+    startTest()
+})
+
+
