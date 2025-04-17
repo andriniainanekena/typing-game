@@ -114,6 +114,12 @@ function afficherSection(sectionId) {
     const targetSection = document.getElementById(sectionId)
     if (targetSection) {
         targetSection.classList.add('section--active')
+        if (sectionId ==='jeu-de-typing') {
+            startTest();
+        }
+    } else {
+        console.warn(`Section "${sectionId}" introuvable, retour à l'accueil.`);
+        document.getElementById('accueil').classList.add('section--active');
     }
 };
 
