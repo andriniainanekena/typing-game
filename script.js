@@ -129,9 +129,6 @@ document.querySelectorAll('.barre-laterale__item').forEach(item => {
         const section = item.getAttribute('data-section')
         if (section) {
             afficherSection(section);
-            if (section === 'jeu-de-typing') {
-                startTest()
-            }
         }
     })
 });
