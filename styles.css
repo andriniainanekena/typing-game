@@ -439,3 +439,170 @@ body.mode-clair .classement__nom i {
 .formulaire-inscription__bouton:hover {
   background-color: #d4ac0d;
 }
+
+.header {
+  margin-bottom: 20px;
+}
+
+.header__title {
+  font-size: 2.5rem;
+  color: #007acc;
+}
+
+.header__label,
+.header__select {
+  font-size: 1rem;
+  margin: 10px;
+}
+
+.main__words {
+  margin: 20px auto;
+  padding: 10px;
+  width: 20cm;
+  font-size: 1.2rem;
+  height: 6cm;
+  background-color: #3b3b3b;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.main__input {
+  width: 60%;
+  padding: 12px;
+  font-size: 1rem;
+  margin-top: 20px;
+  margin-left: 4cm;
+}
+
+.main__results {
+  font-size: 1.2rem;
+  margin-top: 20px;
+  margin-left: 4cm;
+}
+
+.header__controls {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  background-color: rgb(0, 0, 141);
+}
+
+.header__label {
+  font-weight: 600;
+  margin-right: 0.3rem;
+  color: #5168e9;
+}
+
+.header__select {
+  padding: 0.5rem 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  transition: border-color 0.2s ease;
+}
+
+.header__select:focus {
+  border-color: #0f62fe;
+  outline: none;
+}
+.jeu-de-typing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.jeu-de-typing__menu {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.menu-label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.jeu-de-typing select {
+  padding: 8px 12px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid #2a3435;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.jeu-de-typing select:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #00f7ff;
+}
+
+#word-display {
+  font-size: 24px;
+  line-height: 1.6;
+  text-align: center;
+  min-height: 100px;
+  user-select: none;
+  width: 100%;
+}
+
+#word-display span {
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.hidden-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+#results {
+  font-size: 18px;
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  transform: translateY(10px);
+}
+
+#results.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.restart-button {
+  background: #5cb85c;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+  display: none;
+}
+
+.restart-button:hover {
+  background: #4cae4c;
+  transform: scale(1.05);
+}
+
+.restart-button.show {
+  display: inline-block;
+}
