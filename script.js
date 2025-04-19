@@ -176,3 +176,14 @@ document
 document
   .getElementById("submit-inscription")
   .addEventListener("click", () => afficherSection("accueil"));
+
+const fonduEntrées = document.querySelectorAll('.fondu-entrée');
+const observateur = new IntersectionObserver((entrées) => {
+    entrées.forEach(entrée => {
+    if (entrée.isIntersecting) {
+        entrée.target.classList.add('visible');
+    }
+    });
+}, { threshold: 0.1 });
+
+fonduEntrées.forEach(élément => observateur.observe(élément));
