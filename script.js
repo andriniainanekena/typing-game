@@ -5,14 +5,21 @@
  * 
  * Sur ce... Amusez-vous bien ! 
  */
-let startTime = null, previousEndTime = null;
+let startTime = null;
 let currentWordIndex = 0;
+let correctChars = 0, totalCharsTyped = 0;
+let timerInterval = null;
+let timeLeft = 0;
+let virtualInput = "";
 const wordsToType = [];
 
 const modeSelect = document.getElementById("mode");
+const chronoSelect = document.getElementById("chrono");
 const wordDisplay = document.getElementById("word-display");
 const inputField = document.getElementById("input-field");
+const timerDisplay = document.getElementById("timer");
 const results = document.getElementById("results");
+const restartButton = document.getElementById("restart");
 
 const words = {
     easy: ["apple", "banana", "grape", "orange", "cherry"],
