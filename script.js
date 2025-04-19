@@ -38,22 +38,32 @@ const startTest = (wordCount = 50) => {
     wordsToType.length = 0; // Clear previous words
     wordDisplay.innerHTML = ""; // Clear display
     currentWordIndex = 0;
+    correctChars = 0;
+    totalCharsTyped = 0;
+    virtualInput = "";
     startTime = null;
-    previousEndTime = null;
+    clearInterval(timerInterval);
+    document.removeEventListener("keydown", handleKeydown);
+    results.classList.remove("show");
+    restartButton.classList.remove("show");
+    results.textContent = ""; // Clear previous results
+    timerDisplay.textContent = "";
 
     for (let i = 0; i < wordCount; i++) {
         wordsToType.push(getRandomWord(modeSelect.value));
     }
 
     wordsToType.forEach((word, index) => {
-        const span = document.createElement("span");
-        span.textContent = word + " ";
-        if (index === 0) span.style.color = "red"; // Highlight first word
-        wordDisplay.appendChild(span);
+        const wordSpan = document.createElement("span");
+        wordSpan.classList.add("word");
+        if (index === 0) wordSpan.classList.add("word-active");
+        wordSpan.textContent = word;
+        const spaceSpan = document.createElement("span");
+        spaceSpan.textContent = " ";
+        wordDisplay.appendChild(wordSpan);
+        wordDisplay.appendChild(spaceSpan);
     });
-
-    inputField.value = "";
-    results.textContent = "";
+    setupEventListeners();
 };
 
 // Start the timer when user begins typing
