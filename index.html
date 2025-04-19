@@ -209,23 +209,40 @@
                 </div>
 
 
-
-
-    <header>
-        <h1>Typing Test</h1>
-        <label for="mode">Select Mode:</label>
-        <select id="mode">
-            <option value="easy">Easy</option>
-            <option value="medium">Medium</option>
-            <option value="hard">Hard</option>
-        </select>
+<div class="section jeu-de-typing" id="jeu-de-typing">
+    <header class="jeu-de-typing__menu">
+        <div class="menu-item">
+            <span class="menu-label">Langue:</span>
+            <select id="language">
+                <option value="en">Anglais</option>
+                <option value="fr">Français</option>
+            </select>
+        </div>
+        <div class="menu-item">
+            <span class="menu-label">Mode:</span>
+            <select id="mode">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+        </div>
+        <div class="menu-item">
+            <span class="menu-label">Chronomètre:</span>
+            <select id="chrono">
+                <option value="15">15s</option>
+                <option value="30">30s</option>
+                <option value="60">60s</option>
+            </select>
+        </div>
     </header>
-
     <main>
-        <p id="word-display"></p>
-        <input type="text" id="input-field" autofocus>
-        <p id="results">Results : </p>
+        <div id="word-display"></div>
+        <div id="timer"></div>
+        <div id="results"></div>
+        <button class="restart-button" id="restart">Recommencer</button>
+        <input type="text" class="hidden-input" id="input-field" autofocus>
     </main>
+</div>
 
     <script src="script.js"></script>
 </body>
