@@ -383,3 +383,59 @@ body.mode-clair .classement__rang i {
 body.mode-clair .classement__nom i {
     color: #007bff;
 }
+
+.formulaire-inscription {
+  background-color: #2a2a2a;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.formulaire-inscription__titre {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 1.3em;
+}
+
+.formulaire-inscription__groupe {
+  margin-bottom: 10px;
+}
+
+.formulaire-inscription__label {
+  display: block;
+  margin-bottom: 3px;
+  font-size: 0.85em;
+}
+
+.formulaire-inscription__input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #3a3a3a;
+  border-radius: 4px;
+  background-color: #3a3a3a;
+  color: #ffffff;
+  font-size: 0.9em;
+}
+
+.formulaire-inscription__input:focus {
+  outline: none;
+  border-color: #f1c40f;
+}
+
+.formulaire-inscription__bouton {
+  width: 100%;
+  padding: 8px;
+  background-color: #f1c40f;
+  color: #1a1a1a;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.formulaire-inscription__bouton:hover {
+  background-color: #d4ac0d;
+}
