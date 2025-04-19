@@ -68,7 +68,18 @@ const startTest = (wordCount = 50) => {
 
 // Start the timer when user begins typing
 const startTimer = () => {
-    if (!startTime) startTime = Date.now();
+    if (!startTime) {
+        startTime = Date.now();
+        timeLeft = parseInt(chronoSelect.value);
+        timerDisplay.textContent = `Temps restant: ${timeLeft}s`;
+        timerInterval = setInterval(() => {
+            timeLeft--;
+            timerDisplay.textContent = `Temps restant: ${timeLeft}s`;
+            if (timeLeft <= 0) {
+                endTest();
+            }
+        }, 1000);
+    }
 };
 
 // Calculate and return WPM & accuracy
