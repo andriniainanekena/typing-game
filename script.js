@@ -95,33 +95,34 @@ const endTest = () => {
 };
 
 // Move to the next word and update stats only on spacebar press
-const updateWord = (event) => {
-    if (event.key === " ") { // Check if spacebar is pressed
-        if (inputField.value.trim() === wordsToType[currentWordIndex]) {
-            if (!previousEndTime) previousEndTime = startTime;
-
-            const { wpm, accuracy } = getCurrentStats();
-            results.textContent = `WPM: ${wpm}, Accuracy: ${accuracy}%`;
-
-            currentWordIndex++;
-            previousEndTime = Date.now();
-            highlightNextWord();
-
-            inputField.value = ""; // Clear input field after space
-            event.preventDefault(); // Prevent adding extra spaces
+const handleKeydown = (event) => {
+    const key = event.key;
+    if (key === " ") {
+        event.preventDefault();
+    startTimer();
+        const input = virtualInput.trim();
+    if (input === wordsToType[currentWordIndex]) {
+        correctChars += input.length;
+        totalCharsTyped += input.length;
+            const currentWordSpan = wordDisplay.children[currentWordIndex * 2]; // Account for space spans
+        currentWordSpan.classList.remove("word-active");
+        currentWordSpan.classList.add("word-correct");
+        currentWordIndex++;
+            if (currentWordIndex < wordsToType.length) {
+                wordDisplay.children[currentWordIndex * 2].classList.add("word-active");
+                virtualInput = "";
+            } else {
+                endTest();
+            }
+        } else {
+            totalCharsTyped += input.length;
+            virtualInput = "";
         }
-    }
-};
-
-// Highlight the current word in red
-const highlightNextWord = () => {
-    const wordElements = wordDisplay.children;
-
-    if (currentWordIndex < wordElements.length) {
-        if (currentWordIndex > 0) {
-            wordElements[currentWordIndex - 1].style.color = "black";
-        }
-        wordElements[currentWordIndex].style.color = "red";
+    } else if (key === "Backspace") {
+        virtualInput = virtualInput.slice(0, -1);
+    } else if (key.length === 1) {
+        startTimer();
+        virtualInput += key;
     }
 };
 
