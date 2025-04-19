@@ -501,6 +501,32 @@ body.mode-clair .classement__nom i {
 .hidden-input {
 	display: none;
 }
+.word {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.word-active {
+    color: #ff0000;
+}
+
+.word-correct {
+    color: #00ff00;
+}
+
+body.mode-clair .word-active {
+    color: #cc0000;
+}
+
+body.mode-clair .word-correct {
+    color: #008800;
+}
+
+#timer {
+    font-size: 18px;
+    color: #fff;
+    margin: 10px 0;
+}
 
 #results {
   font-size: 18px;
