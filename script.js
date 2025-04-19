@@ -170,3 +170,9 @@ toggleModeButton.addEventListener('click', () => {
     }
 })
 
+document
+  .getElementById("inscription-btn")
+  .addEventListener("click", () => afficherSection("formulaire-inscription"));
+document
+  .getElementById("submit-inscription")
+  .addEventListener("click", () => afficherSection("accueil"));
