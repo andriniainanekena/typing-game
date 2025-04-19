@@ -128,14 +128,21 @@ const handleKeydown = (event) => {
 
 // Event listeners
 // Attach `updateWord` to `keydown` instead of `input`
-inputField.addEventListener("keydown", (event) => {
-    startTimer();
-    updateWord(event);
-});
-modeSelect.addEventListener("change", () => startTest());
+    const setupEventListeners = () => {
+        document.removeEventListener("keydown", handleKeydown);
+        modeSelect.removeEventListener("change", handleModeChange);
+        chronoSelect.removeEventListener("change", handleChronoChange);
+        restartButton.removeEventListener("click", handleRestart);
 
-// Start the test
-startTest();
+        document.addEventListener("keydown", handleKeydown);
+        modeSelect.addEventListener("change", handleModeChange);
+        chronoSelect.addEventListener("change", handleChronoChange);
+        restartButton.addEventListener("click", handleRestart);
+    };
+
+    const handleModeChange = () => startTest();
+    const handleChronoChange = () => startTest();
+    const handleRestart = () => startTest();
 
 
 const sections = document.querySelectorAll('.section')
