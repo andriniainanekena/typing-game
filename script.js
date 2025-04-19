@@ -83,12 +83,15 @@ const startTimer = () => {
 };
 
 // Calculate and return WPM & accuracy
-const getCurrentStats = () => {
-    const elapsedTime = (Date.now() - previousEndTime) / 1000; // Seconds
-    const wpm = (wordsToType[currentWordIndex].length / 5) / (elapsedTime / 60); // 5 chars = 1 word
-    const accuracy = (wordsToType[currentWordIndex].length / inputField.value.length) * 100;
-
-    return { wpm: wpm.toFixed(2), accuracy: accuracy.toFixed(2) };
+const endTest = () => {
+    clearInterval(timerInterval);
+        document.removeEventListener("keydown", handleKeydown);
+            const elapsedTime = (Date.now() - startTime) / 1000 / 60;
+                const wpm = elapsedTime > 0 ? (correctChars / 5 / elapsedTime).toFixed(2) : 0;
+            const accuracy = totalCharsTyped > 0 ? ((correctChars / totalCharsTyped) * 100).toFixed(2) : 0;
+        results.textContent = `WPM: ${wpm}, Accuracy: ${accuracy}%`;
+    results.classList.add("show");
+    restartButton.classList.add("show");
 };
 
 // Move to the next word and update stats only on spacebar press
