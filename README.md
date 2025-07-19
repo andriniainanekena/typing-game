@@ -16,7 +16,7 @@ The project is from a forked repo and was changed to fit the course.
 1. **Clone the Repository**:
 - Fork the repository to your own account.
 - Clone it to your local machine using:
-- 
+
   ```bash
   git clone https://github.com/andriniainanekena/typing-game.git
   ```
