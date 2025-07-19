@@ -1,21 +1,18 @@
-# Vanilla Typing Game
+# Typing Game - Final Exam Project
 
-A typing game that challenges users with random sentences and tracks typing speed and accuracy.  
-Users can see which letters are correct or incorrect and restart the game at any time.
+This is my final exam project for the WEB1 course. It consists of building a typing game that challenges users with random sentences and tracks their typing speed and accuracy. The project is based on a forked repository and has been customized to meet the course requirements with additional features.
 
-## Features
-- Displays random sentences to type
-- Measures typing speed (WPM)
-- Highlights correct and incorrect letters
-- Restart option
-
-## Technologies
-- HTML
-- CSS (can be styled with Tailwind or Bootstrap)
-- JavaScript (no framework)
-
+## Technologies Used
+- **HTML**
+- **CSS**
+- **JavaScript**
 
 ## How to Use
-1. Clone the repo
-2. Open `index.html` in your browser
-3. Start typing the sentence shown
+1. **Clone the Repository**:
+   - Fork the repository to your own account.
+   - Clone it to your local machine using:
+     ```bash
+     git clone https://github.com/andriniainanekena/typing-game.git
+     ```
+2. **Open the Application**:
+   - Navigate to the project directory and open `index.html` in a web browser.
